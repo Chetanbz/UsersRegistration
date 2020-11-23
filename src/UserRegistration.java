@@ -14,6 +14,12 @@ public class UserRegistration {
 			System.out.println("Enter Last name :");
 			String InputLastName = sc.next();
 			check(InputPattern2,InputLastName);
+			String InputPattern3 = "^[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\\.)+[A-Z]{2,}$";  // Email
+			System.out.println("Enter Email :");
+			String InputEmail = sc.next();
+			check(InputPattern3,InputEmail);
+			
+			
 			
 			
 	}
@@ -22,8 +28,7 @@ public class UserRegistration {
 		Matcher matcher = pattern.matcher(InputName);    
 		boolean found = false;    
         while (matcher.find()) {    
-            System.out.println("I found the text "+matcher.group()+" starting at index "+    
-             matcher.start()+" and ending at index "+matcher.end());    
+            System.out.println("I found the text");    
             found = true; 
         }    
         if(!found){    
