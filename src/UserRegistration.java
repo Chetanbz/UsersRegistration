@@ -6,33 +6,35 @@ public class UserRegistration {
 	public static void main(String[] args) {
 		 Scanner sc=new Scanner(System.in);
 			System.out.println("Welcome to user registartion ");
-			String InputPattern = "^(?=.*[A-Z]{1}[a-z A-Z]){3,}$";  // fisrt name pattern
-			System.out.println("Enter first name :");
-			String InputFirstName = sc.next();
-			check(InputPattern,InputFirstName);
-			String InputPattern2 = "^(?=.*[A-Z]{1}[a-z A-Z]){3,}$";  // fisrt name pattern
-			System.out.println("Enter Last name :");
-			String InputLastName = sc.next();
-			check(InputPattern2,InputLastName);
-			String InputPattern3 = "^[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\\.)+[A-Z]{2,}$";  // Email
-			System.out.println("Enter Email :");
-			String InputEmail = sc.next();
-			check(InputPattern3,InputEmail);
 			
+			//String InputPattern = "[A-Z]{1}[a-zA-Z]{2,}";  // fisrt name pattern
+			//System.out.println("Enter first name :");
+			//String InputFirstName = sc.next();
+			//check(InputFirstName,InputPattern);
 			
+			//String InputPattern2 = "[A-Z]{1}[a-zA-Z]{2,}";  // last name pattern
+			//System.out.println("Enter Last name :");
+			//String InputLastName = sc.next();
+			//check(InputLastName,InputPattern2);
+			
+			//String InputPattern3 = "[A-Z]{1}[a-zA-Z]{2,}";  // Email pattern
+			//System.out.println("Enter Email name :");
+			//String InputEmailName = sc.next();
+			//check(InputEmailName,InputPattern3);
+			
+			String InputPattern4 = "([0-9]{2})\\s{1}[7-9][0-9]{9}";  //Mobile pattern
+			System.out.println("Enter Mobile number :");
+			String InputMobile = sc.next();
+			check(InputMobile,InputPattern4);
 			
 			
 	}
-	public static void check(String InputPattern , String InputName) { 
-		Pattern pattern = Pattern.compile(InputPattern); 
-		Matcher matcher = pattern.matcher(InputName);    
-		boolean found = false;    
-        while (matcher.find()) {    
-            System.out.println("I found the text");    
-            found = true; 
-        }    
-        if(!found){    
-            System.out.println("No match found.");  
-        } 
+	public static void check( String InputParameter, String Pattern) { 
+		boolean result = InputParameter.matches(Pattern);
+	      if(result) {
+	         System.out.println("Given input matches with pattern");
+	      } else {
+	         System.out.println("Given input not matches with pattern.");
+	      }	
 	}
 }
