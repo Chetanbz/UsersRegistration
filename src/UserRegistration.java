@@ -10,10 +10,6 @@ public class UserRegistration {
 			System.out.println("Enter first name :");
 			String InputFirstName = sc.next();
 			check(InputPattern,InputFirstName);
-			String InputPattern2 = "^(?=.*[A-Z]{1}[a-z A-Z]){3,}$";  // fisrt name pattern
-			System.out.println("Enter Last name :");
-			String InputLastName = sc.next();
-			check(InputPattern2,InputLastName);
 			
 			
 	}
