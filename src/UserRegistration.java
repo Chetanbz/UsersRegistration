@@ -22,11 +22,16 @@ public class UserRegistration {
 			//String InputEmailName = sc.next();
 			//check(InputEmailName,InputPattern3);
 			
-			String InputPattern4 = "([0-9]{2})\\s{1}[7-9][0-9]{9}";  //Mobile pattern
-			System.out.println("Enter Mobile number :");
-			String InputMobile = sc.next();
-			check(InputMobile,InputPattern4);
+			//String InputPattern4 = "([0-9]{2})\\s{1}[7-9][0-9]{9}";  //Mobile pattern
+			//System.out.println("Enter Mobile number :");
+			//String InputMobile = sc.next();
+			//check(InputMobile,InputPattern4);
 			
+
+			String InputPattern5 = ".{8,}";  //password pattern
+			System.out.println("Enter password number :");
+			String InputMobile = sc.next();
+			check(InputMobile,InputPattern5);
 			
 	}
 	public static void check( String InputParameter, String Pattern) { 
