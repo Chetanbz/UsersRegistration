@@ -28,7 +28,7 @@ public class UserRegistration {
 			//check(InputMobile,InputPattern4);
 			
 
-			String InputPattern5 = ".{8,}";  //password pattern
+			String InputPattern5 = "(?=.*[A-Z])(.{7,})";  //password pattern
 			System.out.println("Enter password number :");
 			String InputMobile = sc.next();
 			check(InputMobile,InputPattern5);
